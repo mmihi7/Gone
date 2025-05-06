@@ -1,7 +1,11 @@
-import type { NextConfig } from "next";
+Add-Content -Path "next.config.js" @"
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    domains: [], // Add any image domains you were using
+  },
+  // Add any other configurations from your previous setup
+}
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
-
-export default nextConfig;
+module.exports = nextConfig
+"@
